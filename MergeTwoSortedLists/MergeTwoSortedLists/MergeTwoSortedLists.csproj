@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E30A0D8-933C-43B2-9823-AB84B3AB868F}</ProjectGuid>
+    <ProjectGuid>{04E77C28-083C-46E6-8142-6447396884A4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>leetCodeImplementstrStr</RootNamespace>
-    <AssemblyName>leetCodeImplementstrStr</AssemblyName>
+    <RootNamespace>MergeTwoSortedLists</RootNamespace>
+    <AssemblyName>MergeTwoSortedLists</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MergeTwoSortedLists.cs" />
+    <Compile Include="ListNode.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
