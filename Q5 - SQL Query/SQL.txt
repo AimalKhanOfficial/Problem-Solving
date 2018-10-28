@@ -1,0 +1,26 @@
+--create table patients (patient_id int, name varchar(100), DOB datetime)
+--create table hospitals (hospital_id int, name varchar(100), city varchar(100))
+--create table visits (visit_id int, patient_id int, hospital_id int, visitdate datetime)
+--insert into patients values(1, 'Alice', '1965-04-02')
+--insert into patients values(2, 'Bob', '1990-08-01')
+--insert into patients values(3, 'Charlie', '1982-07-05')
+
+--insert into hospitals values (1, 'Emory', 'Decatur')
+--insert into hospitals values (2, 'Grady', 'Atlanta')
+--insert into hospitals values (3, 'Northside', 'Dunwoody')
+
+--insert into visits values(1, 2, 2, '2016-01-01')
+--insert into visits values(2, 1, 3, '2016-01-01')
+--insert into visits values(3, 3, 3, '2016-01-01')
+--insert into visits values(4, 2, 1, '2017-01-01')
+--insert into visits values(5, 1, 2, '2017-01-01')
+--select DATEDIFF(year, p.DOB, getdate()) from patients p
+
+
+
+select h.name,count(p.name) as 'Patients over 65' from patients p join visits v on p.patient_id = v.patient_id 
+join hospitals h on h.hospital_id = v.hospital_id
+where DATEDIFF(year, p.DOB, getdate()) >= 65 and year(v.visitdate) = '2017'
+group by h.name
+
+
