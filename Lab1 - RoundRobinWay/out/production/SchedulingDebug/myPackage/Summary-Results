@@ -1,0 +1,9 @@
+Scheduling Type: Pre-Emptive
+Scheduling Name: Round-Robin
+Simulation Run Time: 24
+Mean: 10
+Standard Deviation: 0
+Process #	CPU Time	IO Blocking		CPU Completed		CPU Blocked
+0			10 (ms)			3 (ms)			10 (ms)			2 times
+1			10 (ms)			3 (ms)			10 (ms)			2 times
+2			10 (ms)			3 (ms)			10 (ms)			2 times
