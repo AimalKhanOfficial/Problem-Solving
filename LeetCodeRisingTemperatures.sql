@@ -8,4 +8,5 @@
 --insert into Weather (Id, RecordDate, Temperature) values ('3', '2015-01-03', '20')
 --insert into Weather (Id, RecordDate, Temperature) values ('4', '2015-01-04', '30')
 --insert into Weather (Id, RecordDate, Temperature) values ('5', '2015-01-03', '25')
+
 select w.Id from Weather w where w.Temperature > (select top 1 sub.Temperature from Weather sub where DATEDIFF(DAY, sub.RecordDate, w.RecordDate) = 1 order by sub.RecordDate)
